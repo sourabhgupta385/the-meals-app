@@ -13,7 +13,7 @@ const CategoryMealsScreen = props => {
     meal => meal.categoryIds.indexOf(catId) >= 0
   );
 
-  if (displayedMeals.length === 0 || !favMeals) {
+  if (displayedMeals.length === 0 || !displayedMeals) {
     return (
       <View style={styles.container}>
         <DefaultText style={styles.contentText}>
@@ -27,7 +27,6 @@ const CategoryMealsScreen = props => {
 };
 
 CategoryMealsScreen.navigationOptions = navigationData => {
-  const catId = navigationData.navigation.getParam("categoryId");
   const categoryTitle = navigationData.navigation.getParam("categoryTitle");
 
   return {

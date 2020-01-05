@@ -20,7 +20,6 @@ const FilterSwitch = props => {
   );
 };
 const FiltersScreen = props => {
-  const { navigtion } = props;
   const [isGlutenFree, setIsGlutenFree] = useState(false);
   const [isLactoseFree, setIsLactoseFree] = useState(false);
   const [isVegan, setIsVegan] = useState(false);
@@ -77,7 +76,7 @@ FiltersScreen.navigationOptions = navData => {
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
           title="Favorite"
-          iconName="menu"
+          iconName="md-menu"
           onPress={() => {
             navData.navigation.toggleDrawer();
           }}
@@ -88,7 +87,7 @@ FiltersScreen.navigationOptions = navData => {
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
           title="Save"
-          iconName="save"
+          iconName="ios-save"
           onPress={() => {
             navData.navigation.getParam("save")();
           }}
